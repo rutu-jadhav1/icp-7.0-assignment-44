@@ -12,7 +12,7 @@ function todoCard({task,categeory}) {
         Other: "📁"
     }
     const Category_Color = {
-        Sports: "#008080",
+        Sports: "#bfff80",
         Learning: "#4d4dff",
         Work: "#86b300",
         Personal: "#0099ff",

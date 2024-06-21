@@ -3,7 +3,7 @@ import add from "./plus.png"
 import panda from "./panda.png"
 import panda2 from "./panda2.png"
 import ToDoCard from "../../components/todoCard/todoCard"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import toast, {Toaster} from "react-hot-toast"
 function Home() {
   
@@ -11,6 +11,17 @@ function Home() {
     const [newTask, setNewTask] = useState("")
     const [categeory, setCategory] = useState("")
    
+    useEffect(()=>{ 
+        const savedTOdoList = localStorage.getItem("todoList")
+        if(savedTOdoList){
+            setTodoList(JSON.parse(savedTOdoList))
+        }
+    },[])
+    useEffect(() => {
+        if(todoList.length === 0) return
+
+        localStorage.setItem("todoList", JSON.stringify(todoList))
+    }, [todoList])
 
   return (
     <div>
