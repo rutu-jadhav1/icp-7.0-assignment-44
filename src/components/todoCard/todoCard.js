@@ -16,8 +16,8 @@ function todoCard({task,categeory}) {
         Learning: "#4d4dff",
         Work: "#86b300",
         Personal: "#0099ff",
-        Shopping: "#cc00cc",
-        Health: "#00e600",
+        Shopping: "#ff1ab3",
+        Health: "#00cc00",
         Other: "#ffad33"
     }
 
