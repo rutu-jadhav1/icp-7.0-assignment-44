@@ -4,10 +4,7 @@ import ToDoCard from "../../components/todoCard/todoCard"
 import { useState } from "react"
 function Home() {
   
-    const [todoList, setTodoList] = useState([
-        "finish project",
-         "pay bill",
-    ])
+    const [todoList, setTodoList] = useState([  ])
     const [newTask, setNewTask] = useState("")
 
   return (
@@ -21,6 +18,16 @@ function Home() {
                 )
             })
            }
+
+           {
+            todoList.length === 0
+            ? 
+              <p style={{textAlign:"center"}}>
+                No task to show, Add a new task
+                </p>
+            : null
+           }
+          
         </div>
         <div className="add-item-container">
             <input
