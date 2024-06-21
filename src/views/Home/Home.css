@@ -39,3 +39,10 @@
     margin-left: 990px;
     margin-top: -1210px;
 }
+.categeory-select{
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid gray;
+    margin-left: 5px;
+}

@@ -1,7 +1,20 @@
 .todo-Card{
     padding: 5px 20px ;
-    margin: 10px 5px;
-    border-radius: 10px;
+    margin: 10px 20px;
+    border-radius: 5px;
     border: 1px solid black;
-    font-size: 20px;   
+    font-size: 20px;  
+    position: relative;
+    background-color: rgb(145, 240, 180);
+}
+.category{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: white;
+    font-size: 16px;
+    padding: 2px 5px;
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
 }

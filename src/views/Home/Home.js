@@ -8,18 +8,20 @@ import toast, {Toaster} from "react-hot-toast"
 function Home() {
   
     const [todoList, setTodoList] = useState([  ])
-    const [newTask, setNewTask] = useState("")
+    const [newTask, setNewTask] = useState("hii")
+    const [categeory, setCategory] = useState("Shopping")
 
   return (
     <div>
         <h1 className="app-title">To-Do App📝</h1>
-        <img src={panda} className="panda-img1"/>
+        <img src={panda} className="panda-img1" alt="panda1"/>
         <div className="todolist-container">
            {
             todoList.map((todoItem, i)=>{
-                return(
-                    <ToDoCard key={i} todoItem={todoItem}/>
-                )
+
+                const {task, categeory} = todoItem
+                return  <ToDoCard key={i} task={task} categeory={categeory}/>
+                
             })
            }
 
@@ -32,7 +34,7 @@ function Home() {
             : null
            }
         </div>
-        <img src={panda2} className="panda-img2"/>
+        <img src={panda2} className="panda-img2" alt="panda2"/>
         <div className="add-item-container">
             <input
                 type="text"
@@ -41,6 +43,22 @@ function Home() {
                 value={newTask}
                 onChange={(e)=>setNewTask(e.target.value)}
             />
+
+            <select 
+                className="categeory-select" 
+                value={categeory} 
+                onChange={(e)=>setCategory(e.target.value)}
+            >
+                <option value="">Select Category</option>
+                <option value="Sports">Sports</option>
+                <option value="Learning">Learning</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Health">Health</option>
+                <option value="Other">Other</option>
+            </select>
+
             <img 
                 src={add} 
                 alt="add-btn" 
@@ -50,8 +68,13 @@ function Home() {
                         toast.error('Task Can not be Empty')
                         return
                     }
-                    setTodoList([...todoList, newTask])
+                    if(categeory === ""){
+                        toast.error('Category Can not be Empty')
+                        return
+                    }
+                    setTodoList([...todoList,{task:newTask, categeory: categeory} ])
                     setNewTask("")
+                    setCategory("")
                     toast.success("Task Added Successfully")
                 }}
             />
