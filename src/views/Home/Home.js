@@ -1,7 +1,7 @@
 import "./Home.css"
-import add from "./plus.png"
-import panda from "./panda.png"
-import panda2 from "./panda2.png"
+import add from "./img/plus.png"
+import panda from "./img/panda.png"
+import panda2 from "./img/panda2.png"
 import ToDoCard from "../../components/todoCard/todoCard"
 import { useEffect, useState } from "react"
 import toast, {Toaster} from "react-hot-toast"
@@ -23,6 +23,17 @@ function Home() {
         localStorage.setItem("todoList", JSON.stringify(todoList))
     }, [todoList])
 
+    function deleteItem(index){
+        const newToDoList = todoList.filter((item,i)=>{
+            if (i != index){
+                return true
+            }
+            else{
+                return false
+            }
+        })
+        setTodoList(newToDoList)
+    }
   return (
     <div>
         <h1 className="app-title">To-Do App📝</h1>
@@ -32,7 +43,7 @@ function Home() {
             todoList.map((todoItem, i)=>{
 
                 const {task, categeory} = todoItem
-                return  <ToDoCard key={i} task={task} categeory={categeory}/>
+                return  <ToDoCard key={i} index={i} task={task} categeory={categeory} deleteItem= {deleteItem}/>
                 
             })
            }
