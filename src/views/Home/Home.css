@@ -1,0 +1,29 @@
+
+.app-title{
+    text-align: center;
+}
+.todolist-container{
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    margin: 5px auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+.add-item-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.add-input{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border:1px solid gray;
+    font-size: 18px;
+}
+.add-icon{
+    height: 32px;
+    margin-left: 20px;
+    cursor: pointer;
+}
