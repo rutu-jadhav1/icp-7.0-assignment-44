@@ -5,6 +5,8 @@ import panda2 from "./img/panda2.png"
 import ToDoCard from "../../components/todoCard/todoCard"
 import { useEffect, useState } from "react"
 import toast, {Toaster} from "react-hot-toast"
+import Swal from "sweetalert2"
+
 function Home() {
   
     const [todoList, setTodoList] = useState([])
@@ -24,15 +26,25 @@ function Home() {
     }, [todoList])
 
     function deleteItem(index){
-        const newToDoList = todoList.filter((item,i)=>{
-            if (i != index){
-                return true
-            }
-            else{
-                return false
-            }
+        Swal.fire({
+            title: "Are you sure ?",
+            text: "You want to delete this task!",
+            icon: "warning",
+            showCancelButton: true,
+    }).then((result)=>{
+        if(!result.isConfirmed){
+            return
+        }
+            const newToDoList = todoList.filter((item,i)=>{
+                if (i !== index){
+                    return true
+                }
+                else{
+                    return false
+                }
+            })
+            setTodoList(newToDoList)
         })
-        setTodoList(newToDoList)
     }
   return (
     <div>

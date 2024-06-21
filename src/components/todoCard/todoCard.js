@@ -27,7 +27,7 @@ function todoCard({index,task,categeory,deleteItem}) {
         <span className="category categoryy" style={{backgroundColor: Category_Color[categeory]}}>
             {Category_Emoji[categeory]} {categeory}
         </span>
-            <img src={bin} className="delete-icon categoryy" onClick={()=>{
+            <img src={bin} className="delete-icon categoryy" alt="deleteIcon" onClick={()=>{
                 deleteItem(index)
             }}/>
         
