@@ -5,7 +5,7 @@
 }
 .panda-img1{
     height: 150px;
-    margin-left: 510px;
+    margin-left: 515px;
     margin-bottom: -55px;
 }
 .todolist-container{
@@ -51,13 +51,13 @@
 @media screen and (max-width: 500px) {
     .app-title{
        margin-left: 250px;
-        width: 200px;
+        width: 250px;
     }
     .todolist-container{
         margin: 0% 20%;
     }
   .panda-img1{
-    margin-left:105px;
+    margin-left:98px;
     margin-bottom: -52px;
 }
   .panda-img2{
