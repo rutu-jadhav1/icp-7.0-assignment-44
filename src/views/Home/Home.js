@@ -2,6 +2,7 @@ import "./Home.css"
 import add from "./plus.png"
 import ToDoCard from "../../components/todoCard/todoCard"
 import { useState } from "react"
+import toast, {Toaster} from "react-hot-toast"
 function Home() {
   
     const [todoList, setTodoList] = useState([  ])
@@ -42,11 +43,17 @@ function Home() {
                 alt="add-btn" 
                 className="add-icon"
                 onClick={()=>{
+                    if(newTask === ""){
+                        toast.error('Task Can not be Empty')
+                        return
+                    }
                     setTodoList([...todoList, newTask])
                     setNewTask("")
+                    toast.success("Task Added Successfully")
                 }}
             />
         </div>
+        <Toaster/>
     </div>
   )
 }
