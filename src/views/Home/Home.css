@@ -48,7 +48,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .app-title{
        margin-left: 250px;
         width: 200px;
@@ -57,10 +57,10 @@
         margin: 0% 20%;
     }
   .panda-img1{
-    margin-left:50px;
+    margin-left:75px;
 }
   .panda-img2{
-    margin-left: 540px;
+    margin-left: 560px;
 }
 .add-item-container{
     margin-left: 300px;
