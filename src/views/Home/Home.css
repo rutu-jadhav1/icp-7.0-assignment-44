@@ -1,6 +1,12 @@
 
 .app-title{
     text-align: center;
+    margin-bottom: -58px;
+}
+.panda-img1{
+    height: 150px;
+    margin-left: 510px;
+    margin-bottom: -55px;
 }
 .todolist-container{
     height: 500px;
@@ -15,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
+    margin-top: -10px;
 }
 .add-input{
     padding: 5px 10px;
@@ -27,4 +33,9 @@
     height: 32px;
     margin-left: 20px;
     cursor: pointer;
+}
+.panda-img2{
+    height: 170px;
+    margin-left: 990px;
+    margin-top: -1210px;
 }
