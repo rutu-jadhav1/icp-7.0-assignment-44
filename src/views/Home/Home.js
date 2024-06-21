@@ -7,9 +7,7 @@ import { useState } from "react"
 import toast, {Toaster} from "react-hot-toast"
 function Home() {
   
-    const [todoList, setTodoList] = useState([ 
-        {task:"python learning", categeory: "Learning"}
-     ])
+    const [todoList, setTodoList] = useState([])
     const [newTask, setNewTask] = useState("")
     const [categeory, setCategory] = useState("")
    
